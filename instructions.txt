@@ -1,0 +1,17 @@
+Step 1: Install python (https://youtu.be/JR9zOiaBPTM)
+
+step 2: install some libraries 
+open cmd at location where you project is located
+run this command pip install -r requirements.txt
+remove and put your own telegram chat id in chat_id.txt
+step 3:
+run the file 
+python main.py (run it 24 hours somewhere to run the bot everytime)
+
+Bot URL :http://t.me/kleinde_bot
+
+
+telegram commands:
+/list ( Will list all the currently added urls in the list)
+/add url (add url into list)
+/remove url (remove url into list)
