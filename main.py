@@ -18,7 +18,7 @@ def greet(message):
         print("Command Add")
         mainUrls.append(args[0].replace('"',''))
         #print("u = ",mainUrls)
-        bot.send_message(message.chat.id,"ADDED")
+        bot.send_message(message.chat.id,"Hinzugefügt")
     if command == '/remove':
         mainUrls.remove(args[0])
     if command == '/list':
@@ -29,7 +29,7 @@ def greet(message):
         #print("STARTED")
         #msg = ''' Hello, how are you? '''
         if msg == '':
-            bot.send_message(message.chat.id, "NOTHING ADDED TO LIST")
+            bot.send_message(message.chat.id, "Liste ist leer.")
         else:
             bot.send_message(message.chat.id, msg)
 
@@ -39,7 +39,7 @@ def isResultsFound(url):
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
     'Accept-Language': 'en-US,en;q=0.9',
     'Connection': 'keep-alive',
-    'Referer': 'https://www.kleinanzeigen.de/s-graphic-card/k0',
+    'Referer': 'https://https://www.kleinanzeigen.de',
     'Sec-Fetch-Dest': 'document',
     'Sec-Fetch-Mode': 'navigate',
     'Sec-Fetch-Site': 'same-origin',
@@ -60,7 +60,7 @@ def isResultsFound(url):
 def checkOne(url):
     result = isResultsFound(url)
     if result:
-        message = "SOMETHING GOT LISTED FOR URL:" + "\n" + url+"\n"
+        message = "ETWAS WURDE GELISTET UNTER:" + "\n" + url+"\n"
         if message not in messages:
             bot.send_message(chat_id,message)
             messages.append(message)
